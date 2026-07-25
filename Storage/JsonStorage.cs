@@ -1,4 +1,5 @@
 ﻿using System.Text.Json;
+using TaskTrackerCli.Model;
 
 namespace TaskTrackerCli.Storage
 {
@@ -12,17 +13,17 @@ namespace TaskTrackerCli.Storage
                 File.WriteAllText(FilePath, "[]");
         }
 
-        public List<Task> GetTasks()
+        public List<TaskItem> GetTasks()
         {
             string json = File.ReadAllText(FilePath);
 
             if(json == null)
-                return new List<Task>();
+                return new List<TaskItem>();
 
-            return JsonSerializer.Deserialize<List<Task>>(json);
+            return JsonSerializer.Deserialize<List<TaskItem>>(json);
         }
 
-        public void SaveTasks(List<Task> tasks)
+        public void SaveTasks(List<TaskItem> tasks)
         {
             string json = JsonSerializer.Serialize(tasks, new JsonSerializerOptions
             {
