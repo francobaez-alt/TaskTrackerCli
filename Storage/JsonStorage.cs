@@ -1,4 +1,5 @@
 ﻿using System.Text.Json;
+using TaskTrackerCli.Model;
 
 namespace TaskTrackerCli.Storage
 {
@@ -12,17 +13,19 @@ namespace TaskTrackerCli.Storage
                 File.WriteAllText(FilePath, "[]");
         }
 
-        public List<Task> GetTasks()
+        public List<TaskItem> GetTasks()
         {
             string json = File.ReadAllText(FilePath);
 
             if(json == null)
-                return new List<Task>();
+                return new List<TaskItem>();
 
-            return JsonSerializer.Deserialize<List<Task>>(json);
+            #pragma warning disable CS8603 // Posible tipo de valor devuelto de referencia nulo
+            return JsonSerializer.Deserialize<List<TaskItem>>(json);
+            #pragma warning restore CS8603 // Posible tipo de valor devuelto de referencia nulo
         }
 
-        public void SaveTasks(List<Task> tasks)
+        public void SaveTasks(List<TaskItem> tasks)
         {
             string json = JsonSerializer.Serialize(tasks, new JsonSerializerOptions
             {
