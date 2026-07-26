@@ -170,7 +170,7 @@ Task added successfully (ID: 1)
 
 > task-cli list
 
-1 / Buy Groceries / Done / CreatAt:25/7/2026 22:32:39 / LastUpdate: 25/7/2026 23:00:00
+1 / Learn C# / Todo / CreatAt: 25/7/2026 22:32:39 / LastUpdate: 25/7/2026 22:32:39 
 ```
 
 ---
