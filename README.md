@@ -126,13 +126,13 @@ task-cli delete 1
 ### Mark a task as In Progress
 
 ```bash
-task-cli mark-in-progress 1
+task-cli markinprogress 1
 ```
 
 ### Mark a task as Done
 
 ```bash
-task-cli mark-done 1
+task-cli markdone 1
 ```
 
 ### List all tasks
@@ -156,7 +156,7 @@ task-cli list todo
 ### List tasks in progress
 
 ```bash
-task-cli list in-progress
+task-cli list inprogress
 ```
 
 ---
@@ -170,8 +170,7 @@ Task added successfully (ID: 1)
 
 > task-cli list
 
-ID  Description     Status
-1   Learn C#        Todo
+1 / Buy Groceries / Done / CreatAt:25/7/2026 22:32:39 / LastUpdate: 25/7/2026 23:00:00
 ```
 
 ---
