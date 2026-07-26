@@ -20,7 +20,9 @@ namespace TaskTrackerCli.Storage
             if(json == null)
                 return new List<TaskItem>();
 
+            #pragma warning disable CS8603 // Posible tipo de valor devuelto de referencia nulo
             return JsonSerializer.Deserialize<List<TaskItem>>(json);
+            #pragma warning restore CS8603 // Posible tipo de valor devuelto de referencia nulo
         }
 
         public void SaveTasks(List<TaskItem> tasks)

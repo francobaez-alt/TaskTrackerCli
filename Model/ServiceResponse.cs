@@ -27,5 +27,6 @@ namespace TaskTrackerCli.Model
                 Success = false,
                 Message = message
             };
+        }
     }
 }

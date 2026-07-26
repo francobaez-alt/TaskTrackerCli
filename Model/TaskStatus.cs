@@ -6,7 +6,7 @@ namespace TaskTrackerCli.Model
 {
     public enum TaskStatus
     {
-        ToDo,
+        Todo,
         InProgress,
         Done
     }
